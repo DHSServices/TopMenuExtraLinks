@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/system_file.xsd">
+    <system>
+        <section id="topmenusettings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Top Menu Settings</label>
+            <tab>dhsservices</tab>
+            <resource>DHSServices_TopMenuExtraLinks::configurations</resource>
+            <group id="navigation_settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Navigation Settings</label>
+                <field id="enablehome" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Home Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Show Home Link in TopMenu.]]>
+                    </comment>
+                </field>
+                <field id="enableblog" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Blog Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Show Blog Link in TopMenu.]]>
+                    </comment>
+                </field>
+                <field id="enablecontact" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Contact Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Show Contact Link in TopMenu.]]>
+                    </comment>
+                </field>
+                <field id="enableaboutus" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add About Us Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Show About Us Link in TopMenu.]]>
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

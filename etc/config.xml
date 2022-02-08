@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <topmenusettings>
+            <navigation_settings>
+                <enablehome>1</enablehome>
+                <enableblog>0</enableblog>
+                <enablecontact>0</enablecontact>
+                <enableaboutus>0</enableaboutus>
+            </navigation_settings>
+        </topmenusettings>
+    </default>
+</config>
