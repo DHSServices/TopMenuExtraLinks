@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="catalog.topnav">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">DHSServices_TopMenuExtraLinks::html/topmenu.phtml</argument>
+            </action>
+            <block class="DHSServices\TopMenuExtraLinks\Block\Html\CustomLink" as="topmenu-homepage-link" name="topmenu.homepage.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Home</argument>
+                    <argument name="path" xsi:type="string">/</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                    </argument>
+                </arguments>
+            </block>
+            <block class="DHSServices\TopMenuExtraLinks\Block\Html\CustomLink" as="topmenu-blog-link" name="topmenu.blog.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Advice</argument>
+                    <argument name="path" xsi:type="string">advice</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                    </argument>
+                </arguments>
+            </block>
+            <block class="DHSServices\TopMenuExtraLinks\Block\Html\CustomLink" as="topmenu-contact-link" name="topmenu.contact.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Contact</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                    </argument>
+                </arguments>
+            </block>
+            <block class="DHSServices\TopMenuExtraLinks\Block\Html\CustomLink" as="topmenu-aboutus-link" name="topmenu.aboutus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">About Us</argument>
+                    <argument name="path" xsi:type="string">about-us</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

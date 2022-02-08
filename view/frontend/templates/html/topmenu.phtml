@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+<?php
+// Add Top Menu Custom Links Homepage DHSServices
+$helper = $this->helper('DHSServices\TopMenuExtraLinks\Helper\Data');
+$showHome = $helper->getConfigValue('topmenusettings/navigation_settings/enablehome');
+$showBlog = $helper->getConfigValue('topmenusettings/navigation_settings/enableblog');
+$showContact = $helper->getConfigValue('topmenusettings/navigation_settings/enablecontact');
+$showAboutUs = $helper->getConfigValue('topmenusettings/navigation_settings/enableaboutus');
+// Add Top Menu Custom Links Homepage DHSServices
+?>
+
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?php if ($showHome) { ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+            <?= $block->getChildHtml('topmenu-homepage-link') ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php } ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php $block->unsetChild('topmenu-homepage-link'); ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?= /* @noEscape */ $_menuHtml?>
+        <?php if ($showBlog) { ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+            <?= $block->getChildHtml('topmenu-blog-link') ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php } ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php $block->unsetChild('topmenu-blog-link'); ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php if ($showContact) { ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+            <?= $block->getChildHtml('topmenu-contact-link') ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php } ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php $block->unsetChild('topmenu-contact-link'); ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php if ($showAboutUs) { ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+            <?= $block->getChildHtml('topmenu-aboutus-link') ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php } ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?php $block->unsetChild('topmenu-aboutus-link'); ?> <!-- Add Top Menu Custom Links Homepage DHSServices //-->
+        <?= $block->getChildHtml() ?>
+    </ul>
+</nav>
